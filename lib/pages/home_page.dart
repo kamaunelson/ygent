@@ -9,11 +9,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   late final GenerativeModel _model;
+  late final ChatSession _chatSession;
+
+  @override
+  void initState() {
+    super.initState();
+    _model = GenerativeModel(
+      model: "gemini-pro", 
+      apiKey: const String.fromEnvironment("api_key"),);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(),
+      appBar: AppBar(
+        title: const Text("Ygent"),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(itemBuilder: (context, index) {
+              
+            }))
+        ],
+      ),
     );
   }
 }
