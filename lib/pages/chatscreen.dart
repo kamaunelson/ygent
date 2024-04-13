@@ -74,14 +74,10 @@ class _ChatScreenState extends State<ChatScreen> {
     // Send the text message
     final response = await chat.sendMessage(Content.text(message));
 
-    if (response != null) {
-      // Extract the text response from Gemini
-      final geminiResponse = response.text;
-      _addMessage(geminiResponse!, isUser: false);
-    } else {
-      _addMessage("Error: No response from Gemini", isUser: false);
-    }
-  } catch (error) {
+    // Extract the text response from Gemini
+    final geminiResponse = response.text;
+    _addMessage(geminiResponse!, isUser: false);
+    } catch (error) {
     _addMessage("Error: $error", isUser: false);
   }
 }
