@@ -74,32 +74,6 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   // Asynchronously sends a message to Gemini chat service using the provided message string.
-  // Future<void> _sendMessageToGemini(String message) async {
-  //   try {
-  //     final chat = await _model.startChat(history: []);
-  //     final response = await chat.sendMessage(Content.text(message));
-  //     final geminiResponse = response.text;
-  //     _addMessage(ChatMessage(text: geminiResponse!, isUser: false));
-  //   } catch (error) {
-  //     _addMessage(ChatMessage(text: "Error: $error", isUser: false));
-  //   }
-  // }
-
-//   Future<void> _sendMessageToGemini(String message) async {
-//   try {
-//     final chat = await _model.startChat(history: []);
-//     final response = await chat.sendMessage(Content.text(message));
-//     if (response != null && response.text != null) {
-//       final geminiResponse = response.text!;
-//       _addMessage(ChatMessage(text: geminiResponse, isUser: false));
-//     } else {
-//       _addMessage(const ChatMessage(
-//           text: "Error: Unable to get response from Gemini", isUser: false));
-//     }
-//   } catch (error) {
-//     _addMessage(ChatMessage(text: "Error: $error", isUser: false));
-//   }
-// }
 Future<void> _sendMessageToGemini(String message) async {
   try {
     final chat = await _model.startChat(history: []);
