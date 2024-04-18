@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ygent/pages/chatscreen.dart';
+//import 'package:ygent/pages/chatscreen.dart';
+import 'package:ygent/pages/window.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChatScreen(),
+      //home: ChatScreen(),
+      home: WindowScreen(),
     );
   }
 }
