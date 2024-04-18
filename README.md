@@ -1,6 +1,6 @@
 # ygent
 
-A new Flutter project.
+This flutter project is based on Gemini AI, single screen app.
 
 ## Getting Started
 
