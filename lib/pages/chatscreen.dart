@@ -17,7 +17,8 @@ class _ChatScreenState extends State<ChatScreen> {
   final GenerativeModel _model = GenerativeModel(
     model: 'gemini-pro',
     apiKey: "AIzaSyBWzww2xQ5m_j-0KjSjAAinqIb7H_pmqmI",
-    generationConfig: GenerationConfig(maxOutputTokens: 100),
+    //edited out the maxOutputTokens cause its limiting the responses
+    //generationConfig: GenerationConfig(maxOutputTokens: 100),
   );
   final List<ChatMessage> _messages = [];
 
